@@ -68,6 +68,22 @@ To deal damage from a Blueprint:
 Get BP_Goblin reference → Apply Damage (target=goblin, amount=10)
 ```
 
+## EPIC SKELETON COMPATIBILITY
+
+This character is rigged directly to the Epic Skeleton (SK_Mannequin), which is included in the pack at `Content/Meshborn/PaleRaiderGoblin/Meshes/EpicSkeleton/`.
+
+### Use Case A — Self-contained (default, no setup)
+Drop the BP_PaleRaiderGoblin into your level. The character works out of the box with the included SK_Mannequin and animation set. No additional setup needed.
+
+### Use Case B — Share Animation Blueprint with your existing Manny/Quinn project
+If your project already uses the Epic Skeleton (e.g., Third Person template) and you want the goblin to share Animation Blueprints with your existing characters:
+
+1. Open `SK_PaleRaiderGoblin`.
+2. In the Skeleton field of the Asset Details panel, click the dropdown and select **your project's SK_Mannequin_Skeleton** (the one from `Content/Characters/Mannequins/`).
+3. Save. The goblin now uses your existing skeleton and shares all your ABPs and animations directly.
+
+This 2-click operation lets you fully integrate the goblin into any Manny/Quinn-based project while keeping the pack self-contained for projects that don't use Third Person template.
+
 ---
 
 ## Configuration Reference
